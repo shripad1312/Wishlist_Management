@@ -1,72 +1,83 @@
 Xindus Assignment: Wishlist Management Backend
-Welcome to the Xindus Assignment repository! This backend application serves as the backend solution for managing wishlists in an e-commerce platform. The application is built using Spring Boot, Spring Security , and Spring Data JPA.
+Welcome to the Xindus Assignment repository! This backend application serves as the backend solution for managing wishlists in an e-commerce platform. The application is built using Spring Boot, Spring Security, and Spring Data JPA.
 
 Features
 User Authentication: Secure signup and login functionality using Spring Security.
 Wishlist Management: RESTful API endpoints for managing user wishlists, including creation and deletion of wishlist items.
 Database Integration: Integration with a relational database using Spring Data JPA for storing user information and wishlist items.
-
 Setup and Usage
 Prerequisites
+
 Java Development Kit (JDK) version 8 or higher
-Maven
-Installation
-Step1:- Clone the repository to your local machine:
+Maven Installation
+Installation Steps
 
+Clone the repository to your local machine:
+
+bash
+Copy code
 git clone [https://github.com/shripad1312/Wishlist_Management.git]
-Step2:- Navigate to the project directory:
+Navigate to the project directory:
 
+bash
+Copy code
 cd XindusWishlistManagement
-Step3:- Build the project using Maven:
+Build the project using Maven:
 
+bash
+Copy code
 mvn clean install
+Database Setup:
 
+Create a database with the name "Xi" in MySQL.
+Run the Spring application, ensuring the MySQL server is on simultaneously.
 
-#Steps
-1)#Create a database with name "Xi" in mysql
-2)run the spring application make sure  mysql server should be on at same time
-3)after sucessfully run of project open postman for api 
-4)Add User first all the api's are follwed with proper data below by using this yoou can make your custom users also
-5)Add a Product then all the api's are follwed with proper req body and you can add you custom product also
-6)After that you can perform any Wishlist relataed api given below only Basic Auth is necessary to Access that api
-#End
+After successfully running the project, open Postman for API testing.
 
-The application will start on the default port 8080.
+Add User: Use the provided API endpoint and JSON body to add a user.
+
+Add a Product: Utilize the API endpoint and JSON body to add a product.
+
+Perform wishlist-related API operations using Basic Auth for authentication.
+
 API Usage
-NOTE:Open Postman or any HTTP client application.
+Note: Open Postman or any HTTP client application.
 
-#Sign Up:Add a User
+Sign Up: Add a User
+
 Send a POST request to [http://localhost:8080/Public/User/add] with JSON body containing user details:
+
+json
+Copy code
 {
-"name":"user1",
-"username":"user1",
-"password":"user1"
+    "name":"user1",
+    "username":"user1",
+    "password":"user1"
 }
-Username always should be unique whil adding user
-Note:by using above attributes you can make custom users
+Username must be unique when adding a user.
 
-#Add a Product
-Send a POST request to [http://localhost:8080/Public/Product/addProduct] with JSON body containing user credentials:
+Add a Product: Send a POST request to
+[http://localhost:8080/Public/Product/addProduct] with JSON body containing product details:
+
+json
+Copy code
 {
-"name":"HIVE",
-"qty":12
+    "name":"HIVE",
+    "qty":12
 }
-Note: You can can add your custom products also using above
+You can add custom products using the above format.
 
-#Note:For now on Api' you should use "Basic Auth from postman" and enter there registerd username and valid password
+Adding Product to Wishlist:
 
-#Post req:for adding product into User's wishlist
-post url:[http://localhost:8080/api/wishlists/addToCart/{valid product id here}]
-product id you will get when you add a product after adding 1 product you can use 1 as a default value which you can change later
-here Authorization should be "Basic Auth" from postman if we enter wrong details it will throw 401 error on postman
+Send a POST request to [http://localhost:8080/api/wishlists/addToCart/{valid product id}].
+Authorization should be "Basic Auth" from Postman.
+Get Wishlist: Retrieve all wishlist items of the logged-in user.
 
-#Get req:It will Give all wishlist og logged in user
-get Url :[http://localhost:8080/api/wishlists/getList]
+Send a GET request to [http://localhost:8080/api/wishlists/getList].
+Delete Product from Wishlist:
 
-Delete req:it will take product id as a parameter and delete the Product from wishlist
-#delete Url:[http://localhost:8080/api/wishlists/delete/3]
-Note:only authorized user and valid product user can be delete from wishlist if user is not valid or invalid product is there it will throw custom Exception with proper response
-
-#Note:Only Authorized user can use above 3 api's
+Send a DELETE request to 
+[http://localhost:8080/api/wishlists/delete/{product id}].
+Only authorized users can perform this action.
 
 Thank you for exploring the Xindus Assignment backend repository! We hope this documentation provides clear guidance on setting up, configuring, and using the application.
