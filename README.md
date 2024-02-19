@@ -16,7 +16,7 @@ Clone the repository to your local machine:
 
 bash
 Copy code
-git clone [https://github.com/shripad1312/Wishlist_Management.git]&nbsp
+git clone [https://github.com/shripad1312/Wishlist_Management.git]<br/>
 Navigate to the project directory:
 
 bash
