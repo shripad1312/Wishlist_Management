@@ -45,39 +45,45 @@ Note: Open Postman or any HTTP client application.
 
 Sign Up: Add a User
 
-Send a POST request to [http://localhost:8080/Public/User/add] with JSON body containing user details:
+Send a POST request to <br/>[http://localhost:8080/Public/User/add]<br/>
+with JSON body containing user details:
 
 json
+<br/>
 Copy code
 {
     "name":"user1",
     "username":"user1",
     "password":"user1"
 }
+<br/>
 Username must be unique when adding a user.
 
-Add a Product: Send a POST request to
-[http://localhost:8080/Public/Product/addProduct] with JSON body containing product details:
+Add a Product: Send a POST request to<br/>
+[http://localhost:8080/Public/Product/addProduct] <br/>with JSON body containing product details:
 
 json
+<br/>
 Copy code
 {
     "name":"HIVE",
     "qty":12
 }
+<br/>
 You can add custom products using the above format.
 
+<br/>
 Adding Product to Wishlist:
 
-Send a POST request to [http://localhost:8080/api/wishlists/addToCart/{valid product id}].
+Send a POST request to <br/>[http://localhost:8080/api/wishlists/addToCart/{valid product id}]<br/>
 Authorization should be "Basic Auth" from Postman.
 Get Wishlist: Retrieve all wishlist items of the logged-in user.
 
-Send a GET request to [http://localhost:8080/api/wishlists/getList].
+Send a GET request to <br/>[http://localhost:8080/api/wishlists/getList]<br/>
 Delete Product from Wishlist:
 
 Send a DELETE request to 
-[http://localhost:8080/api/wishlists/delete/{product id}].
+<br/>[http://localhost:8080/api/wishlists/delete/{product id}]<br/>
 Only authorized users can perform this action.
 
 Thank you for exploring the Xindus Assignment backend repository! We hope this documentation provides clear guidance on setting up, configuring, and using the application.
