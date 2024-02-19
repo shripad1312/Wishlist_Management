@@ -1,4 +1,6 @@
-Xindus Assignment: Wishlist Management Backend
+<b>Xindus Assignment: Wishlist Management Backend<b>
+<br/>
+
 Welcome to the Xindus Assignment repository! This backend application serves as the backend solution for managing wishlists in an e-commerce platform. The application is built using Spring Boot, Spring Security, and Spring Data JPA.
 
 Features
